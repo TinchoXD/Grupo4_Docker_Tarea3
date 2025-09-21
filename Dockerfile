@@ -2,7 +2,7 @@
 FROM python:3.12-slim AS builder
 WORKDIR /app
 COPY requerimientos.txt .
-RUN pip install --upgrade pip && pip wheel --no-cache-dir --wheel-dir=/wheels -r requirements.txt
+RUN pip install --upgrade pip && pip wheel --no-cache-dir --wheel-dir=/wheels -r requerimientos.txt
 
 # EJECUCION
 FROM python:3.12-slim
