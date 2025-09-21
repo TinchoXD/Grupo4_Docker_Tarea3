@@ -10,5 +10,5 @@ WORKDIR /app
 COPY --from=builder /wheels /wheels
 RUN pip install --no-cache /wheels/*
 COPY app ./app
-EXPOSE 8012
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8012"]
+EXPOSE 8004
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8004"]
